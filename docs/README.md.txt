@@ -1,5 +1,17 @@
 # CHANGELOG - Sistema de Controle de Despesas
 
+## v1.0.0-mvp - (09/11/2025) (Entrega B4T01.3)
+
+-   **MVP PRONTO**: O Produto Mínimo Viável foi concluído.
+-   Implementadas as classes de Modelo: `TipoDespesa` e `Despesa`.
+-   Implementadas as classes de Repositório: `TipoDespesaRepository` e `DespesaRepository`, responsáveis pela leitura e escrita nos arquivos `tipos_despesa.txt` e `despesas.txt`.
+-   `Main.java` atualizado:
+    -   Funcionalidade 5 ("Gerenciar Tipos") agora permite CRIAR e LISTAR tipos.
+    -   Funcionalidade 1 ("Entrar Despesa") agora salva uma despesa associada a um tipo.
+    -   Funcionalidade 3 ("Listar Despesas em Aberto") agora lê do arquivo e exibe as despesas salvas.
+-   As funcionalidades (2, 4, 6) permanecem como *stubs* para a V2.
+-   Adicionada tag `v1.0.0-mvp` ao repositório Git.
+
 ## v0.0.2 - (08/11/2025) (Entrega B4T01.2)
 
 -   Definição da Separação de Prioridades (MoSCoW) no `README.md`.
