@@ -65,4 +65,34 @@ public class TipoDespesaRepository {
         }
         return null; // Não encontrado
     }
+
+    // --- MÉTODOS NOVOS ADICIONADOS ---
+
+    public boolean editar(int id, String novoNome) {
+        TipoDespesa tipoParaEditar = buscarPorId(id);
+        
+        if (tipoParaEditar != null) {
+            tipoParaEditar.setNome(novoNome); // Usa o novo método setNome
+            salvarNoArquivo(); // Salva a mudança no arquivo
+            System.out.println("Tipo editado com sucesso!");
+            return true;
+        }
+        
+        System.out.println("Erro: Tipo não encontrado.");
+        return false;
+    }
+
+    public boolean excluir(int id) {
+        TipoDespesa tipoParaExcluir = buscarPorId(id);
+        
+        if (tipoParaExcluir != null) {
+            this.tipos.remove(tipoParaExcluir); // Remove da lista em memória
+            salvarNoArquivo(); // Salva a mudança (agora sem o item)
+            System.out.println("Tipo excluído com sucesso!");
+            return true;
+        }
+        
+        System.out.println("Erro: Tipo não encontrado.");
+        return false;
+    }
 }

@@ -15,6 +15,12 @@ public class TipoDespesa {
         return nome;
     }
 
+    // ADICIONE ESTE MÉTODO
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    // FIM DA ADIÇÃO
+
     // Usado para salvar no arquivo de texto no formato "id;nome"
     public String paraStringCsv() {
         return this.id + ";" + this.nome;

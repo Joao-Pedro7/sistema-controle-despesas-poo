@@ -1,5 +1,19 @@
 # CHANGELOG - Sistema de Controle de Despesas
 
+## v2.0.0-FINAL - (09/11/2025) (Entrega B4_A_TRABALHO)
+
+-   **PROJETO 100% CONCLUÍDO.**
+-   Implementada a refatoração para POO avançado:
+    -   Interface `Pagavel` e classe `Pagamento`.
+    -   Classe `Despesa` transformada em `abstract`.
+    -   Classe `DespesaPadrao` criada (Herança) com Construtor Sobrecarga.
+-   Funcionalidade **"Anotar Pagamento" (Opção 2)** implementada.
+-   Funcionalidade **"Listar Despesas Pagas" (Opção 4)** implementada.
+-   Funcionalidade **"Gerenciar Tipos de Despesa" (Opção 5)** agora inclui "Editar" e "Excluir" (com trava de segurança).
+-   Funcionalidade **"Listar Despesas" (Opções 3 e 4)** agora inclui um submenu para "Editar" e "Excluir" despesas.
+-   Funcionalidade **"Gerenciar Usuários" (Opção 6)** transformada em um submenu completo (Cadastrar, Listar, Editar, Excluir) com trava de segurança.
+-   Implementada a tela de Login inicial.
+
 ## v1.0.0-mvp - (09/11/2025) (Entrega B4T01.3)
 
 -   **MVP PRONTO**: O Produto Mínimo Viável foi concluído.
