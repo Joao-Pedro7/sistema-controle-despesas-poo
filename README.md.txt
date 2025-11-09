@@ -82,3 +82,50 @@ Abaixo está a abstração inicial das classes que representarão as regras de n
     -   `public void excluir(TipoDespesa tipo)`
 
 *(...e assim por diante para `UsuarioRepository` e `DespesaRepository`)*
+
+
+---
+
+## B4T01.2: Separação de Prioridades (MoSCoW)
+
+Para definir a ordem de construção, as funcionalidades do sistema foram priorizadas usando o método MoSCoW:
+
+### M - MUST HAVE (Obrigatório)
+*São as funções centrais. Sem elas, o sistema não tem valor.*
+-   **Gerenciar Tipos de Despesa:** Criar e Listar (uma despesa precisa de um tipo).
+-   **Entrar Despesa:** Inserir uma nova despesa.
+-   **Listar Despesas em Aberto:** Ver o que foi inserido.
+-   **Persistência em Arquivo:** Salvar e ler os dados em arquivos de texto (o núcleo do projeto).
+
+### S - SHOULD HAVE (Deveria Ter)
+*São importantes, mas não vitais para o primeiro funcionamento.*
+-   **Anotar Pagamento:** Marcar uma despesa como paga (Conciliação).
+-   **Listar Despesas Pagas:** Filtro de despesas pagas.
+-   **Gerenciar Usuários:** Cadastro com login e senha.
+-   **Criptografia de Senhas:** Implementar a segurança de senha.
+
+### C - COULD HAVE (Poderia Ter)
+*São "nice-to-have", melhorias que podem ficar para o final.*
+-   **Editar Despesa:** Alterar dados de uma despesa.
+-   **Excluir Despesa:** Remover uma despesa.
+-   **Editar/Excluir Tipos de Despesa:** Gerenciamento completo.
+-   **Editar/Listar Usuários:** Gerenciamento completo de usuários.
+
+### W - WON'T HAVE (Não Terá... por agora)
+-   Interface Gráfica (GUI).
+-   Relatórios complexos ou gráficos.
+-   Integração com bancos de dados (ex: SQL).
+
+---
+
+## B4T01.2: Projeto do MVP (Minimum Viable Product)
+
+Com base nas prioridades, o **MVP (Produto Mínimo Viável)** é a primeira versão funcional que será construída.
+
+O objetivo do MVP será:
+1.  Permitir que o usuário **crie um Tipo de Despesa** (ex: "Alimentação").
+2.  Permitir que o usuário **insira uma Despesa** (ex: "Jantar", 50.00) usando o tipo criado.
+3.  Permitir que o usuário **liste as Despesas em Aberto** e veja a despesa que acabou de criar.
+4.  **Tudo isso deve ser salvo e lido de arquivos de texto.**
+
+*Obs: O MVP inicial não terá o sistema de login (Gerenciar Usuários) ou a função de Anotar Pagamento. Essas são as funcionalidades da V2.*
